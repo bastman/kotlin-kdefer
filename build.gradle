@@ -1,0 +1,27 @@
+group 'com.bastman.kotlin-kdefer'
+version '1.0-SNAPSHOT'
+
+buildscript {
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+
+
+subprojects {
+    apply plugin: 'kotlin'
+    repositories {
+        mavenCentral()
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.5'
+}
+
+
